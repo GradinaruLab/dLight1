@@ -1,7 +1,6 @@
 function y = FP_Session_Processing2(x,t1,t2)
 % Process Fiber Photometry (FP) data according to Lerner et al. Cell, 2015.
 % dF/F = (490nm signal - fitted 400nm signal)/fitted 400nm signal
-% Lowcut filter is set to 6 Hz.
 %
 % Inputs
 % x: FP data file loaded by "TDT2mat.m" (required)
