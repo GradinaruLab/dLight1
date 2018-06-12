@@ -6,5 +6,6 @@ MATLAB code to load raw photometry data (recorded by TDT rigs, see methods in Pa
 
 To download data and code to generate figures in MATLAB, please click the link below:
 https://www.dropbox.com/sh/ghpzchf1jmragrh/AADbFcWRtARsWrD-DbTJYQrZa?dl=0
+Simply execute m files to load data and generate figures.
 
 If there is any questions/problems, please contact Ryan: ryanjhcho@gmail.com
