@@ -58,17 +58,23 @@ else
 end
 % TTL vector is in seconds
 
-%% Fit and Align 405 signal to 490 one
+%% Fit and Align 405 signal to 490 one <--------------------------------This part is most useful: about least-squares linear fit
 % Modeled as 490signal = a * 400signal + b;
 % A*theta = B
 % where B = [490signal] and
 % A = [400signal one-vector];
-% basically, this is like solving linear equation
+% (basically, this is like solving linear equation)
 B = data(1,:)';
 A = [data(2,:)' ones(length(data),1)];
 theta = A\B;
 fit400 = theta(1)*data(2,:)+theta(2);
-dF = 100*detrend((data(1,:)-fit400)./fit400);
+
+% % Or Alternatively, you can use polyfit too
+% P = polyfit(data(2,:),data(1,:),1);
+% a = P(1); b = P(2);
+% fit400 = a.*data(2,:) + b;
+
+dF = 100*detrend((data(1,:)-fit400)./fit400); % Get dF/F in %
 
 % %% Visualize
 % % demeaned 490 and 400 signals
